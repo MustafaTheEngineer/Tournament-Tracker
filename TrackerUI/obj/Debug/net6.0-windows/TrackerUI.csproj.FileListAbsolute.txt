@@ -1,0 +1,17 @@
+C:\Users\Mustafa Esat\Desktop\Engineering\C#\Tournament\TournamentTracker\TrackerUI\bin\Debug\net6.0-windows\TrackerUI.exe
+C:\Users\Mustafa Esat\Desktop\Engineering\C#\Tournament\TournamentTracker\TrackerUI\bin\Debug\net6.0-windows\TrackerUI.deps.json
+C:\Users\Mustafa Esat\Desktop\Engineering\C#\Tournament\TournamentTracker\TrackerUI\bin\Debug\net6.0-windows\TrackerUI.runtimeconfig.json
+C:\Users\Mustafa Esat\Desktop\Engineering\C#\Tournament\TournamentTracker\TrackerUI\bin\Debug\net6.0-windows\TrackerUI.dll
+C:\Users\Mustafa Esat\Desktop\Engineering\C#\Tournament\TournamentTracker\TrackerUI\bin\Debug\net6.0-windows\TrackerUI.pdb
+C:\Users\Mustafa Esat\Desktop\Engineering\C#\Tournament\TournamentTracker\TrackerUI\obj\Debug\net6.0-windows\TrackerUI.csproj.AssemblyReference.cache
+C:\Users\Mustafa Esat\Desktop\Engineering\C#\Tournament\TournamentTracker\TrackerUI\obj\Debug\net6.0-windows\TrackerUI.TournamentViewerForm.resources
+C:\Users\Mustafa Esat\Desktop\Engineering\C#\Tournament\TournamentTracker\TrackerUI\obj\Debug\net6.0-windows\TrackerUI.csproj.GenerateResource.cache
+C:\Users\Mustafa Esat\Desktop\Engineering\C#\Tournament\TournamentTracker\TrackerUI\obj\Debug\net6.0-windows\TrackerUI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mustafa Esat\Desktop\Engineering\C#\Tournament\TournamentTracker\TrackerUI\obj\Debug\net6.0-windows\TrackerUI.AssemblyInfoInputs.cache
+C:\Users\Mustafa Esat\Desktop\Engineering\C#\Tournament\TournamentTracker\TrackerUI\obj\Debug\net6.0-windows\TrackerUI.AssemblyInfo.cs
+C:\Users\Mustafa Esat\Desktop\Engineering\C#\Tournament\TournamentTracker\TrackerUI\obj\Debug\net6.0-windows\TrackerUI.csproj.CoreCompileInputs.cache
+C:\Users\Mustafa Esat\Desktop\Engineering\C#\Tournament\TournamentTracker\TrackerUI\obj\Debug\net6.0-windows\TrackerUI.dll
+C:\Users\Mustafa Esat\Desktop\Engineering\C#\Tournament\TournamentTracker\TrackerUI\obj\Debug\net6.0-windows\refint\TrackerUI.dll
+C:\Users\Mustafa Esat\Desktop\Engineering\C#\Tournament\TournamentTracker\TrackerUI\obj\Debug\net6.0-windows\TrackerUI.pdb
+C:\Users\Mustafa Esat\Desktop\Engineering\C#\Tournament\TournamentTracker\TrackerUI\obj\Debug\net6.0-windows\TrackerUI.genruntimeconfig.cache
+C:\Users\Mustafa Esat\Desktop\Engineering\C#\Tournament\TournamentTracker\TrackerUI\obj\Debug\net6.0-windows\ref\TrackerUI.dll
