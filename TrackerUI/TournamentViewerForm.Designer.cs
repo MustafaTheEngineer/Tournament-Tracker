@@ -74,7 +74,7 @@
             this.roundLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.roundLabel.Location = new System.Drawing.Point(40, 143);
             this.roundLabel.Name = "roundLabel";
-            this.roundLabel.Size = new System.Drawing.Size(117, 46);
+            this.roundLabel.Size = new System.Drawing.Size(115, 45);
             this.roundLabel.TabIndex = 2;
             this.roundLabel.Text = "Round";
             // 
@@ -93,7 +93,7 @@
             this.unplayedOnlyCheckBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.unplayedOnlyCheckBox.Location = new System.Drawing.Point(163, 236);
             this.unplayedOnlyCheckBox.Name = "unplayedOnlyCheckBox";
-            this.unplayedOnlyCheckBox.Size = new System.Drawing.Size(261, 50);
+            this.unplayedOnlyCheckBox.Size = new System.Drawing.Size(257, 49);
             this.unplayedOnlyCheckBox.TabIndex = 4;
             this.unplayedOnlyCheckBox.Text = "Unplayed Only";
             this.unplayedOnlyCheckBox.UseVisualStyleBackColor = true;
@@ -115,7 +115,7 @@
             this.teamOneName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.teamOneName.Location = new System.Drawing.Point(595, 329);
             this.teamOneName.Name = "teamOneName";
-            this.teamOneName.Size = new System.Drawing.Size(208, 46);
+            this.teamOneName.Size = new System.Drawing.Size(203, 45);
             this.teamOneName.TabIndex = 6;
             this.teamOneName.Text = "<team one>";
             // 
@@ -126,7 +126,7 @@
             this.teamOneScoreLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.teamOneScoreLabel.Location = new System.Drawing.Point(595, 395);
             this.teamOneScoreLabel.Name = "teamOneScoreLabel";
-            this.teamOneScoreLabel.Size = new System.Drawing.Size(104, 46);
+            this.teamOneScoreLabel.Size = new System.Drawing.Size(100, 45);
             this.teamOneScoreLabel.TabIndex = 7;
             this.teamOneScoreLabel.Text = "Score";
             // 
@@ -151,7 +151,7 @@
             this.teamTwoScoreLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.teamTwoScoreLabel.Location = new System.Drawing.Point(595, 578);
             this.teamTwoScoreLabel.Name = "teamTwoScoreLabel";
-            this.teamTwoScoreLabel.Size = new System.Drawing.Size(104, 46);
+            this.teamTwoScoreLabel.Size = new System.Drawing.Size(100, 45);
             this.teamTwoScoreLabel.TabIndex = 10;
             this.teamTwoScoreLabel.Text = "Score";
             // 
@@ -162,7 +162,7 @@
             this.teamTwoName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.teamTwoName.Location = new System.Drawing.Point(595, 512);
             this.teamTwoName.Name = "teamTwoName";
-            this.teamTwoName.Size = new System.Drawing.Size(208, 46);
+            this.teamTwoName.Size = new System.Drawing.Size(202, 45);
             this.teamTwoName.TabIndex = 9;
             this.teamTwoName.Text = "<team two>";
             // 
@@ -173,7 +173,7 @@
             this.versusLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.versusLabel.Location = new System.Drawing.Point(705, 466);
             this.versusLabel.Name = "versusLabel";
-            this.versusLabel.Size = new System.Drawing.Size(87, 46);
+            this.versusLabel.Size = new System.Drawing.Size(85, 45);
             this.versusLabel.TabIndex = 12;
             this.versusLabel.Text = "-VS-";
             // 
