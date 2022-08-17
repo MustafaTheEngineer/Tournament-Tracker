@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v6.0": {
       "TrackerUI/1.0.0": {
+        "dependencies": {
+          "TrackerLibrary": "1.0.0"
+        },
         "runtime": {
           "TrackerUI.dll": {}
+        }
+      },
+      "TrackerLibrary/1.0.0": {
+        "runtime": {
+          "TrackerLibrary.dll": {}
         }
       }
     }
   },
   "libraries": {
     "TrackerUI/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TrackerLibrary/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "+5EO0ihb2DZKOr+9NcZa5+DBznhvQXos13bdY27t3mFgMxnegAmH3gcBBQNmsa0bIX2VhI9vIzy+AZXPzfe3Ig==",
+  "dgSpecHash": "CRvHk5TR0rC+LCJiKv8x7yCuE9+PAsatMVbl+QX0ryiMXVdAFjfxrqP5seXMxO+WVen2KaU+9qZmee6hfsgSww==",
   "success": true,
   "projectFilePath": "C:\\Users\\Mustafa Esat\\Desktop\\Engineering\\C#\\Tournament\\TournamentTracker\\TrackerUI\\TrackerUI.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Mustafa Esat\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512"
+  ],
   "logs": []
 }

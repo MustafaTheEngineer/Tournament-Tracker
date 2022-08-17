@@ -1,0 +1,5 @@
+C:\Users\Mustafa Esat\Desktop\Engineering\C#\Tournament\TournamentTracker\TrackerLibrary\obj\Debug\net6.0\TrackerLibrary.csproj.AssemblyReference.cache
+C:\Users\Mustafa Esat\Desktop\Engineering\C#\Tournament\TournamentTracker\TrackerLibrary\obj\Debug\net6.0\TrackerLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mustafa Esat\Desktop\Engineering\C#\Tournament\TournamentTracker\TrackerLibrary\obj\Debug\net6.0\TrackerLibrary.AssemblyInfoInputs.cache
+C:\Users\Mustafa Esat\Desktop\Engineering\C#\Tournament\TournamentTracker\TrackerLibrary\obj\Debug\net6.0\TrackerLibrary.AssemblyInfo.cs
+C:\Users\Mustafa Esat\Desktop\Engineering\C#\Tournament\TournamentTracker\TrackerLibrary\obj\Debug\net6.0\TrackerLibrary.csproj.CoreCompileInputs.cache

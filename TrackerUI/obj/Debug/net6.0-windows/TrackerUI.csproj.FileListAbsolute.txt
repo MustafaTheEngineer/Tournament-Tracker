@@ -19,3 +19,6 @@ C:\Users\Mustafa Esat\Desktop\Engineering\C#\Tournament\TournamentTracker\Tracke
 C:\Users\Mustafa Esat\Desktop\Engineering\C#\Tournament\TournamentTracker\TrackerUI\obj\Debug\net6.0-windows\TrackerUI.CreatePrizeForm.resources
 C:\Users\Mustafa Esat\Desktop\Engineering\C#\Tournament\TournamentTracker\TrackerUI\obj\Debug\net6.0-windows\TrackerUI.CreateTeamForm.resources
 C:\Users\Mustafa Esat\Desktop\Engineering\C#\Tournament\TournamentTracker\TrackerUI\obj\Debug\net6.0-windows\TrackerUI.TournamentDashboardForm.resources
+C:\Users\Mustafa Esat\Desktop\Engineering\C#\Tournament\TournamentTracker\TrackerUI\bin\Debug\net6.0-windows\TrackerLibrary.dll
+C:\Users\Mustafa Esat\Desktop\Engineering\C#\Tournament\TournamentTracker\TrackerUI\bin\Debug\net6.0-windows\TrackerLibrary.pdb
+C:\Users\Mustafa Esat\Desktop\Engineering\C#\Tournament\TournamentTracker\TrackerUI\obj\Debug\net6.0-windows\TrackerUI.csproj.CopyComplete
