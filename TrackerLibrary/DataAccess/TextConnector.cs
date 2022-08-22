@@ -52,5 +52,10 @@ namespace TrackerLibrary.DataAccess
 
             return model;
         }
+
+        public List<PersonModel> getPersonAll()
+        {
+            return peopleFile.fullFilePath().loadFile().convertToPersonModels();
+        }
     }
 }
