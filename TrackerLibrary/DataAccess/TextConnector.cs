@@ -12,6 +12,8 @@ namespace TrackerLibrary.DataAccess
     {
         private const string prizesFile = "PrizeModel.csv";
         private const string peopleFile = "PeopleModel.csv";
+        private const string teamFile = "TeamModels.csv";
+        private const string tournamentFile = "TournamentModels.csv";
 
         public PersonModel createPerson(PersonModel model)
         {
@@ -56,6 +58,40 @@ namespace TrackerLibrary.DataAccess
         public List<PersonModel> getPersonAll()
         {
             return peopleFile.fullFilePath().loadFile().convertToPersonModels();
+        }
+
+        public TeamModel createTeam(TeamModel model)
+        {
+            List<TeamModel> teams = teamFile.fullFilePath().loadFile().convertToTeamModels(peopleFile);
+
+            int currentId = 1;
+            if (teams.Count > 0)
+                currentId = currentId = teams.OrderByDescending(x => x.Id).First().Id + 1;
+
+            model.Id = currentId;
+
+            teams.Add(model);
+
+            teams.saveToTeamFile(teamFile);
+
+            return model;
+        }
+
+        public List<TeamModel> getTeamAll()
+        {
+            return teamFile.fullFilePath().loadFile().convertToTeamModels(peopleFile);
+        }
+
+        public TournamentModel createTournament(TournamentModel model)
+        {
+            List<TournamentModel> tournaments = tournamentFile
+                .fullFilePath()
+                .loadFile()
+                .convertToTournamentModels(teamFile,peopleFile,prizesFile);
+
+            int currentId = 1;
+
+            if (tournaments.Count > 0) currentId = tournaments.OrderByDescending(x => x.Id).First().Id + 1;
         }
     }
 }
