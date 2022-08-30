@@ -128,13 +128,17 @@ namespace TrackerUI
             tm.Prizes = selectedPrizes;
             tm.EnteredTeams = selectedTeams;
 
-            // TODO - create our matchups
+            // TODO - Wire our matchups
+            TournamentLogic.createRounds(tm);
+            // Order our list randomly of teams
+            // Check if it is big enough - if not, add in byes
+            //  Create our first round of matchups
+            // Create every round after that
+
             // TODO - Create tournament entry
             // TODO - create all of the prizes entries
             // TODO - create all of team entries
             GlobalConfig.Connection.createTournament(tm);
-
-            
         }
     }
 }

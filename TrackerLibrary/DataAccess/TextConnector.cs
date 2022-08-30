@@ -82,7 +82,7 @@ namespace TrackerLibrary.DataAccess
             return teamFile.fullFilePath().loadFile().convertToTeamModels(peopleFile);
         }
 
-        public TournamentModel createTournament(TournamentModel model)
+        public void createTournament(TournamentModel model)
         {
             List<TournamentModel> tournaments = tournamentFile
                 .fullFilePath()
@@ -92,6 +92,12 @@ namespace TrackerLibrary.DataAccess
             int currentId = 1;
 
             if (tournaments.Count > 0) currentId = tournaments.OrderByDescending(x => x.Id).First().Id + 1;
+
+            model.Id = currentId;
+
+            tournaments.Add(model);
+
+            tournaments.saveToTournamentFile(tournamentFile);
         }
     }
 }
