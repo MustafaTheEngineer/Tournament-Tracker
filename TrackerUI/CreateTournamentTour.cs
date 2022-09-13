@@ -119,6 +119,18 @@ namespace TrackerUI
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            else if(tournamentNameValue.Text.Length == 0)
+            {
+                MessageBox.Show("Please enter tournament name.", "Lost tournament name",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else if (selectedTeams.Count == 0)
+            {
+                MessageBox.Show("Please enter teams.", "No teams",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             // TODO - create our tournament model
             TournamentModel tm = new TournamentModel();

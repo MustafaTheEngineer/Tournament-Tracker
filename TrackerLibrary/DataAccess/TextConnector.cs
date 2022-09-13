@@ -14,10 +14,12 @@ namespace TrackerLibrary.DataAccess
         private const string peopleFile = "PeopleModel.csv";
         private const string teamFile = "TeamModels.csv";
         private const string tournamentFile = "TournamentModels.csv";
+        private const string matchupFile = "MatchupModels.csv";
+        private const string matchupEntryFile = "MatchupEntryModels.csv";
 
         public PersonModel createPerson(PersonModel model)
         {
-            List<PersonModel> people = peopleFile.fullFilePath().loadFile().convertToPersonModels();
+            List<PersonModel> people = GlobalConfig.peopleFile.fullFilePath().loadFile().convertToPersonModels();
 
             int currentId = 1;
             if (people.Count > 0)
@@ -36,7 +38,7 @@ namespace TrackerLibrary.DataAccess
         {
             // * Load the text file
             // * Convert the text to List<PrizeModel>
-            List<PrizeModel> prizes = prizesFile.fullFilePath().loadFile().convertToPrizeModels();
+            List<PrizeModel> prizes = GlobalConfig.prizesFile.fullFilePath().loadFile().convertToPrizeModels();
 
             // Find the max ID
             int currentId = 1;
@@ -57,12 +59,12 @@ namespace TrackerLibrary.DataAccess
 
         public List<PersonModel> getPersonAll()
         {
-            return peopleFile.fullFilePath().loadFile().convertToPersonModels();
+            return GlobalConfig.peopleFile.fullFilePath().loadFile().convertToPersonModels();
         }
 
         public TeamModel createTeam(TeamModel model)
         {
-            List<TeamModel> teams = teamFile.fullFilePath().loadFile().convertToTeamModels(peopleFile);
+            List<TeamModel> teams = GlobalConfig.teamFile.fullFilePath().loadFile().convertToTeamModels(GlobalConfig.peopleFile);
 
             int currentId = 1;
             if (teams.Count > 0)
@@ -72,14 +74,14 @@ namespace TrackerLibrary.DataAccess
 
             teams.Add(model);
 
-            teams.saveToTeamFile(teamFile);
+            teams.saveToTeamFile(GlobalConfig.teamFile);
 
             return model;
         }
 
         public List<TeamModel> getTeamAll()
         {
-            return teamFile.fullFilePath().loadFile().convertToTeamModels(peopleFile);
+            return GlobalConfig.teamFile.fullFilePath().loadFile().convertToTeamModels(GlobalConfig.peopleFile);
         }
 
         public void createTournament(TournamentModel model)
@@ -87,7 +89,7 @@ namespace TrackerLibrary.DataAccess
             List<TournamentModel> tournaments = tournamentFile
                 .fullFilePath()
                 .loadFile()
-                .convertToTournamentModels(teamFile,peopleFile,prizesFile);
+                .convertToTournamentModels(GlobalConfig.teamFile, GlobalConfig.peopleFile, GlobalConfig.prizesFile);
 
             int currentId = 1;
 
@@ -95,9 +97,19 @@ namespace TrackerLibrary.DataAccess
 
             model.Id = currentId;
 
+            model.saveRoundsToFile(GlobalConfig.matchupFile, GlobalConfig.matchupEntryFile);
+
             tournaments.Add(model);
 
             tournaments.saveToTournamentFile(tournamentFile);
+        }
+
+        public List<TournamentModel> getTournamentAll()
+        {
+            return tournamentFile
+                .fullFilePath()
+                .loadFile()
+                .convertToTournamentModels(GlobalConfig.teamFile, GlobalConfig.peopleFile, GlobalConfig.prizesFile);
         }
     }
 }

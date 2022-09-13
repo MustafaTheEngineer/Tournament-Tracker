@@ -10,6 +10,13 @@ namespace TrackerLibrary
 {
     public static class GlobalConfig
     {
+        public const string prizesFile = "PrizeModel.csv";
+        public const string peopleFile = "PeopleModel.csv";
+        public const string teamFile = "TeamModels.csv";
+        public const string tournamentFile = "TournamentModels.csv";
+        public const string matchupFile = "MatchupModels.csv";
+        public const string matchupEntryFile = "MatchupEntryModels.csv";
+
         // private set means just methods in this class can change it.
         public static IDataConnection Connection { get; private set; }
         public static void initializeConnections(DatabaseType db)
