@@ -41,5 +41,10 @@ namespace TrackerUI
             TournamentViewerForm frm = new TournamentViewerForm(tm);
             frm.Show();
         }
+
+        private void TournamentDashboardForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -111,5 +111,10 @@ namespace TrackerLibrary.DataAccess
                 .loadFile()
                 .convertToTournamentModels(GlobalConfig.teamFile, GlobalConfig.peopleFile, GlobalConfig.prizesFile);
         }
+
+        public void updateMatchup(MatchupModel model)
+        {
+            model.updateMatchupToFile();
+        }
     }
 }

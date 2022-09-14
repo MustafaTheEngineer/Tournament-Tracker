@@ -268,7 +268,6 @@ namespace TrackerLibrary.DataAccess.TextHelpers
 
                     if (cols[0] == id)
                         matchingEntries.Add(entry);
-                    
                 }
             }
 
@@ -370,14 +369,49 @@ namespace TrackerLibrary.DataAccess.TextHelpers
             File.WriteAllLines(GlobalConfig.matchupFile.fullFilePath(), lines);
         }
 
+        public static void updateMatchupToFile(this MatchupModel matchup)
+        {
+            List<MatchupModel> matchups = GlobalConfig.matchupFile.fullFilePath().loadFile().convertToMatchupModels();
+
+            MatchupModel oldMatchup = null;
+
+            foreach (MatchupModel m in matchups)
+            {
+                if(m.Id == matchup.Id)  oldMatchup = m;
+            }
+
+            matchups.Remove(oldMatchup);
+
+            matchups.Add(matchup);
+
+            foreach (MatchupEntryModel entry in matchup.Entries)
+            {
+                entry.updateEntryToFile();
+            }
+
+            // save to file
+            List<string> lines = new List<string>();
+
+            //id=0,entries=1(pipe delimited by id), winner=2, matchupRound=3
+            foreach (MatchupModel m in matchups)
+            {
+                string winner = "";
+                if (m.Winner != null)   winner = m.Winner.Id.ToString();
+
+                lines.Add($"{m.Id},{convertMatchupEntryListToString(m.Entries)},{winner},{m.MatchupRound}");
+            }
+
+            File.WriteAllLines(GlobalConfig.matchupFile.fullFilePath(), lines);
+
+        }
+
         public static void saveEntryToFile(this MatchupEntryModel entry, string matchupEntryFile)
         {
             List<MatchupEntryModel> entries = GlobalConfig.matchupEntryFile.fullFilePath().loadFile().convertToMatchupEntryModels();
 
             int currentId = 1;
 
-            if(entries.Count > 0)
-                currentId = entries.OrderByDescending(x => x.Id).First().Id + 1;
+            if(entries.Count > 0)   currentId = entries.OrderByDescending(x => x.Id).First().Id + 1;
             
             entry.Id = currentId;
             entries.Add(entry);
@@ -394,6 +428,37 @@ namespace TrackerLibrary.DataAccess.TextHelpers
                 if(e.TeamCompeting != null)
                     teamCompeting = e.TeamCompeting.Id.ToString();
                 
+                lines.Add($"{e.Id},{teamCompeting},{e.Score},{parent}");
+            }
+
+            File.WriteAllLines(GlobalConfig.matchupEntryFile.fullFilePath(), lines);
+        }
+
+        public static void updateEntryToFile(this MatchupEntryModel entry)
+        {
+            List<MatchupEntryModel> entries = GlobalConfig.matchupEntryFile.fullFilePath().loadFile().convertToMatchupEntryModels();
+            MatchupEntryModel oldEntry = new MatchupEntryModel();
+
+            foreach (MatchupEntryModel e in entries)
+            {
+                if (e.Id == oldEntry.Id)    oldEntry = e;
+            }
+            entries.Remove(oldEntry);
+            
+            entries.Add(entry);
+
+            List<string> lines = new List<string>();
+
+            foreach (MatchupEntryModel e in entries)
+            {
+                string parent = "";
+                if (e.ParentMatchup != null)
+                    parent = e.ParentMatchup.Id.ToString();
+
+                string teamCompeting = "";
+                if (e.TeamCompeting != null)
+                    teamCompeting = e.TeamCompeting.Id.ToString();
+
                 lines.Add($"{e.Id},{teamCompeting},{e.Score},{parent}");
             }
 

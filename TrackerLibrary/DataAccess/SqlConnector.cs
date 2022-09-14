@@ -277,7 +277,7 @@ namespace TrackerLibrary.DataAccess
                         List<TeamModel> allTeams = getTeamAll();
 
                         if(m.WinnerId > 0)
-                            m.Winner = allTeams.Where(x => x.Id == m.Winner.Id).First();
+                            m.Winner = allTeams.Where(x => x.Id == m.WinnerId).First();
                         
 
                         foreach (var me in m.Entries)
@@ -311,6 +311,37 @@ namespace TrackerLibrary.DataAccess
             }
 
             return output;
+        }
+
+        public void updateMatchup(MatchupModel model)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db)))
+            {
+                var p = new DynamicParameters();
+
+                if (model.Winner != null)
+                {                    
+                    p.Add("@id", model.Id);
+                    p.Add("@WinnerId", model.Winner.Id);
+
+                    connection.Execute("dbo.spMatchups_Update", p, commandType: CommandType.StoredProcedure);
+                }
+
+                // spMatchupEntries_Update id, TeamCompetingId, Score
+
+                foreach (MatchupEntryModel me in model.Entries)
+                {
+                    p = new DynamicParameters();
+                    if (me.TeamCompeting != null)
+                    {
+                        p.Add("@id", me.Id);
+                        p.Add("@TeamCompeting", me.TeamCompeting.Id);
+                        p.Add("@Score", me.Score); 
+                    }
+
+                    connection.Execute("dbo.spMatchupEntries_Update", p, commandType: CommandType.StoredProcedure);
+                }
+            }
         }
     }
 }
